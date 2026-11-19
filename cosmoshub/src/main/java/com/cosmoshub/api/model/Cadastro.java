@@ -13,7 +13,7 @@ public class Cadastro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     // Opcional no banco; obrigatório só para Aluno (regra validada no service)
     @Column(length = 8, unique = true)
@@ -37,11 +37,11 @@ public class Cadastro {
     @Column(name = "tipo_usuario", nullable = false, length = 20)
     private String tipoUsuario;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
